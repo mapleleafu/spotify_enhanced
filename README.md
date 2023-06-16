@@ -6,6 +6,12 @@
 
 This program, designed with the purpose of selecting songs added by Spotify when the enhancement feature is turned on in your playlists, employs OCR (Optical Character Recognition) to automate interactions with the Spotify application. It captures a screenshot of the Spotify window, performs text recognition to locate specific elements, and simulates mouse clicks to interact with these identified elements.
 
+<center>
+
+![](spotify_enhanced\gif.gif)
+
+</center>
+
 # Prerequisites
 - Python 3.7 or above
 - Tesseract OCR Engine installed (https://github.com/tesseract-ocr/tesseract)
