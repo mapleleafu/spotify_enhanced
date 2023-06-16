@@ -8,7 +8,7 @@ This program, designed with the purpose of selecting songs added by Spotify when
 
 <center>
 
-![](spotify_enhanced\gif.gif)
+![](https://github.com/mapleleafu/spotify_enhanced/gif.gif)
 
 </center>
 
