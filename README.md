@@ -53,16 +53,12 @@ python main.py
 
 4. If the pattern is found, the program will simulate mouse clicks on the identified elements.
 
-5. The process will continue until the pattern is not found for two consecutive iterations.
+5. The process will continue until the pattern is not found for five consecutive iterations.
 
-6. Press any key to stop the program.
+6. Press **any key** to stop the program.
 
-# Customization
+# Essential Customization
 
-- You can modify the `pixel_coordinates` variable to define the pixel coordinates of a specific area within the Spotify window to capture in the screenshot. Adjust it according to your requirements.
-
-- Update the `pattern` variable to define a different pattern to match elements in the Spotify window. This pattern is used to filter out non-relevant elements.
+- Modify `pixel_coordinates` to define the pixel coordinates of the "Added by" column on Spotify, ensuring that the Spotify text is accurately readable and clickable.
 
 - Adjust the `scroll` variable to match the total pixel amount necessary for scrolling through an entire page, based on your specific requirements.
-
-- Modify the `wx` and `wy` variables to adjust the screen position for mouse clicks. These variables represent the offset from the top-left corner of the Spotify window.
