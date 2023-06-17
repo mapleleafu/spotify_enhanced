@@ -63,4 +63,6 @@ python main.py
 
 - Update the `pattern` variable to define a different pattern to match elements in the Spotify window. This pattern is used to filter out non-relevant elements.
 
+- Adjust the `scroll` variable to match the total pixel amount necessary for scrolling through an entire page, based on your specific requirements.
+
 - Modify the `wx` and `wy` variables to adjust the screen position for mouse clicks. These variables represent the offset from the top-left corner of the Spotify window.

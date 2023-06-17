@@ -15,7 +15,7 @@ path_tes = os.getenv("PATH_TES")
 pytesseract.tesseract_cmd = path_tes
 
 toplist, winlist = [], []
-pixel_coordinates = (1300, 0, 1420, 0) #! Define pixel coordinates of the "Added by" column
+pixel_coordinates = (1300, 0, 1470, 0) #! Define pixel coordinates of the "Added by" column
 
 def enum_cb(hwnd, results):
     winlist.append((hwnd, win32gui.GetWindowText(hwnd)))
@@ -37,7 +37,7 @@ def bring_spotify_to_foreground(pixel_coordinates):
 img_path = 'cropped_screenshot.png'
 
 # Define a pattern that closely matches 'Spotify'
-pattern = re.compile('s[pb]o[t1l]i?[tf][iy]', re.IGNORECASE)
+pattern = re.compile('s[pb]?o?[t1l]?i?[tf]?[iy]?|sin|sity|ss', re.IGNORECASE)
 
 spotify_not_found_count = 0
 
@@ -84,8 +84,8 @@ while running:
     else:
         spotify_not_found_count = 0
 
-    if spotify_not_found_count >= 2:
-        print("Spotify text not found after 2 scrolls. Stopping the program.")
+    if spotify_not_found_count >= 5:
+        print("Spotify text not found after 5 scrolls. Stopping the program.")
         break
 
     # Sort the coordinates from top to bottom
@@ -102,9 +102,10 @@ while running:
         pyautogui.click()
         pyautogui.keyUp('ctrl')
 
-    pyautogui.scroll(-1000)
-
+    #! Replace this with the total pixel amount required to scroll through an entire page
+    pyautogui.scroll(-980)
     cv2.imwrite('annotified_image.png', img)
     pass  
 
-print(f"Program stopped after pressing '{stop_key}' key.")
+if stop_key != None:
+    print(f"Program stopped after pressing '{stop_key}' key.")
