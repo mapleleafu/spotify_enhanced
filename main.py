@@ -101,7 +101,9 @@ while running:
 
     #! Replace this with the total pixel amount required to scroll through an entire page
     pyautogui.scroll(-980)
-    cv2.imwrite('annotified_image.png', img)
+    
+    if found_spotify == True:
+        cv2.imwrite('annotified_image.png', img)
     pass  
 
 if stop_key != None:
